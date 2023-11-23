@@ -44,7 +44,7 @@
         }
         p {
             font-family: 'Times New Roman';
-            font-size: 20px;
+            font-size: 25px;
             line-height: 1.5;
         }
         .scroll-down {
@@ -53,14 +53,14 @@
             color: white;
             transition: opacity 0.15s ease-in-out;
             opacity: 1;
-            margin-top: 20px; /* Adjust as needed */
+            margin-top: 25px; /* Adjust as needed */
         }
         .main-content {
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             padding-left: 10vw;
             padding-right: 10vw;
-            font-size: 20px;
+            font-size: 25px;
         }
     </style>
     <script>
@@ -72,11 +72,11 @@
             var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         
             var scrollFraction = scrollPosition / window.innerHeight;
-            var filterValue = 1 - (0.7 * scrollFraction);
+            var filterValue = 1 - (0.75 * scrollFraction);
         
-            bg.style.filter = 'brightness(' + Math.max(filterValue, 0.3) + ')';
+            bg.style.filter = 'brightness(' + Math.max(filterValue, 0.25) + ')';
         
-            if (scrollPosition > window.innerHeight / 2) {
+            if (scrollPosition > window.innerHeight / 10) {
                 if (!scrollDown.classList.contains('visible')) {
                     scrollDown.style.opacity = '0';
                     setTimeout(function() {
