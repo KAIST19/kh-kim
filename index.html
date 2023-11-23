@@ -38,7 +38,6 @@
             font-family: 'Times New Roman';
             font-size: 4vw;
             text-align: center;
-            transition: opacity 0.3s;
         }
         h1.visible, .main-content.visible {
             opacity: 1;
@@ -53,13 +52,13 @@
             font-family: 'Arial';
             font-size: 1.5vw;
             color: white;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.15s ease-in-out;
             opacity: 1;
             margin-top: 20px; /* Adjust as needed */
         }
         .main-content {
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
             padding-left: 10vw;
             padding-right: 10vw;
             font-size: 2vw;
@@ -79,15 +78,29 @@
             bg.style.filter = 'brightness(' + Math.max(filterValue, 0.3) + ')';
         
             if (scrollPosition > window.innerHeight / 2) {
+                if (!scrollDown.classList.contains('visible')) {
+                    scrollDown.style.opacity = '0';
+                    setTimeout(function() {
+                        scrollDown.textContent = '20190051—Kanghyeon Kim';
+                        scrollDown.style.opacity = '1';
+                    }, 500); // Match this delay with CSS transition duration
+                    scrollDown.classList.add('visible');
+                }
                 h1.classList.add('visible');
                 mainContent.classList.add('visible');
-                scrollDown.textContent = '20190051—Kanghyeon Kim'; // Change text here
             } else {
+                if (scrollDown.classList.contains('visible')) {
+                    scrollDown.style.opacity = '0';
+                    setTimeout(function() {
+                        scrollDown.textContent = 'Scroll down';
+                        scrollDown.style.opacity = '1';
+                    }, 500); // Match this delay with CSS transition duration
+                    scrollDown.classList.remove('visible');
+                }
                 h1.classList.remove('visible');
                 mainContent.classList.remove('visible');
-                scrollDown.textContent = 'Scroll down'; // Revert back to original text
             }
-        });        
+        });              
     </script>
 </head>
 <body>
@@ -98,6 +111,15 @@
             <p class="scroll-down" style="font-size: 2vw; font-family: 'Times New Roman'">Scroll down</p>
         </div>
         <div class="main-content">
+            <h2>Introduction</h2>
+            <h2>The Questions</h2>
+            <h3>Q1. </h3>
+            <h3>Q2. </h3>
+            <h3>Q3. </h3>
+            <h2>Conclusion</h2>
+
+            <h2>Archive</h2>
+            <h3>Proposal</h3>
             <p>The capacity for linguistic communication used to be a defining trait of human uniqueness. Yet, with language models now able to replicate this skill, we, who have seldom reflected on the essence of human identity, find ourselves deeply challenged. To be prepared for the upcoming AI era, we need to better understand the difference between the way humans and language models speak.</p>
             <p>However, the attempts to understand these two are often made on very different scales. While human languages are usually considered as emergent properties (e.g. psychology and literature), language models’ languages are analyzed with very reductionist approaches. There is no such thing as human language architecture—like the transformer model for language models—or language model psychology.</p>
             <p>My final project aims to answer two questions: 1) “What’s the transformer model’s counterpart for humans?” and 2) “Considering language models as a human, how do they speak?”</p>
