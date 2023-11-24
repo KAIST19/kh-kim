@@ -70,6 +70,14 @@ p {
     line-height: 1.5;
 }
 
+figcaption {
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(200, 200, 200)
+}
+
 .scroll-down {
     text-align: center;
     font-family: 'Arial';
