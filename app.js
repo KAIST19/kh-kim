@@ -33,4 +33,24 @@ window.addEventListener('scroll', function() {
         h1.classList.remove('visible');
         mainContent.classList.remove('visible');
     }
+    var headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    var fixedHeader = document.querySelector('.fixed-header');
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Finding the current active header
+    var currentHeader = null;
+    for (var i = 0; i < headers.length; i++) {
+        if (headers[i].offsetTop <= scrollPosition + 100) { // 100 is the offset
+            currentHeader = headers[i];
+        } else {
+            break;
+        }
+    }
+
+    if (currentHeader) {
+        fixedHeader.innerHTML = currentHeader.outerHTML;
+        fixedHeader.style.display = 'block';
+    } else {
+        fixedHeader.style.display = 'none';
+    }
 });             
