@@ -1,12 +1,15 @@
 window.addEventListener('scroll', function() {
-    var h1 = document.querySelector('h1');
+    // scrolling
     var scrollDown = document.querySelector('.scroll-down');
     var mainContent = document.querySelector('.main-content');
     var bg = document.querySelector('.fixed-background');
     var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
     var scrollFraction = scrollPosition / window.innerHeight;
     var filterValue = 1 - (0.75 * scrollFraction);
+
+    // navigation
+    var sections = document.querySelectorAll('.main-content > div');
+    var navLinks = document.querySelectorAll('.side-navigation ul li a');
 
     bg.style.filter = 'brightness(' + Math.max(filterValue, 0.25) + ')';
 
@@ -19,7 +22,6 @@ window.addEventListener('scroll', function() {
             }, 500); // Match this delay with CSS transition duration
             scrollDown.classList.add('visible');
         }
-        h1.classList.add('visible');
         mainContent.classList.add('visible');
     } else {
         if (scrollDown.classList.contains('visible')) {
@@ -33,8 +35,6 @@ window.addEventListener('scroll', function() {
         h1.classList.remove('visible');
         mainContent.classList.remove('visible');
     }
-    var sections = document.querySelectorAll('.main-content > div');
-    var navLinks = document.querySelectorAll('.side-navigation ul li a');
 
     let activeSection = null;
     sections.forEach(section => {
