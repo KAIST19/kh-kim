@@ -82,3 +82,24 @@ p {
     padding-right: 10vw;
     font-size: 25px;
 }
+
+img, iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Ensures the element fits within its container */
+}
+
+iframe {
+    width: 960px; /* Default width, adjust as needed */
+    height: 540px; /* Default height, adjust as needed */
+}
+
+/* Responsive iframe sizing */
+@media screen and (max-width: 960px) {
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    }
+}
