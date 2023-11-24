@@ -4,12 +4,10 @@ body, html {
     height: 100%;
     color: white;
 }
-
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Centers the container */
 }
-
 .fixed-background {
     position: fixed;
     top: 0;
@@ -25,7 +23,7 @@ body, html {
 .side-navigation {
     position: fixed;
     top: 50%;
-    right: 0;
+    right: 0; /* Changed from 'left: 0;' to 'right: 0;' */
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -42,65 +40,67 @@ body, html {
     text-decoration: none;
 }
 
+/* Highlight the active section link */
 .active-link {
     font-weight: bold;
     color: yellow;
 }
 
 .main-content {
-    box-sizing: border-box;
-    padding: 20px; /* Apply padding directly instead of left and right separately */
+    box-sizing: border-box; /* Includes padding in width calculation */
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 200%;
+    /* Other styles remain the same */
 }
-
 h1 {
     margin-top: 20vh;
     font-family: 'Times New Roman';
     font-size: 40pt;
     text-align: center;
 }
-
 h1.visible, .main-content.visible {
     opacity: 1;
 }
-
 p {
     font-family: 'Times New Roman';
     font-size: 25px;
     line-height: 1.5;
 }
-
 .scroll-down {
     text-align: center;
     font-family: 'Arial';
     color: white;
     transition: opacity 0.15s ease-in-out;
     opacity: 1;
-    margin-top: 25px;
+    margin-top: 25px; /* Adjust as needed */
 }
-
 .main-content {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    padding: 10vw; /* Apply padding directly instead of left and right separately */
+    padding-left: 10vw;
+    padding-right: 10vw;
     font-size: 25px;
 }
 
 img, iframe {
     display: block;
-    margin: 0 auto; /* Center horizontally */
-    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Ensures the element fits within its container */
     height: auto;
 }
 
 iframe {
-    width: 100%; /* Use full width for responsiveness */
-    height: 0;
-    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio for responsive iframes */
+    width: 960px; /* Default width, adjust as needed */
+    height: 540px; /* Default height, adjust as needed */
+    aspect-ratio: 16 / 9;
 }
 
+/* Responsive iframe sizing */
 @media screen and (max-width: 960px) {
     iframe, img {
         width: 100%;
+        height: auto;
     }
 }
