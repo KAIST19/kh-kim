@@ -19,6 +19,33 @@ body, html {
     background-position: center;
     z-index: -1;
 }
+
+.side-navigation {
+    position: fixed;
+    top: 50%;
+    right: 0; /* Changed from 'left: 0;' to 'right: 0;' */
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 10;
+}
+
+.side-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-navigation ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Highlight the active section link */
+.active-link {
+    font-weight: bold;
+    color: yellow;
+}
+
 .main-content {
     box-sizing: border-box; /* Includes padding in width calculation */
     padding-left: 20px;
