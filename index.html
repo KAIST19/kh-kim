@@ -1,106 +1,10 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-        <meta charset="UTF-8">
-        <title>LLM vs Human</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            color: white;
-        }
-        .container {
-            width: 80%; /* Adjust as needed */
-            margin: 0 auto; /* Centers the container */
-        }
-        .fixed-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data/images/human_vs_gpt.png');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-        .main-content {
-            box-sizing: border-box; /* Includes padding in width calculation */
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 200%;
-            /* Other styles remain the same */
-        }
-        h1 {
-            margin-top: 70vh;
-            font-family: 'Times New Roman';
-            font-size: 50pt;
-            text-align: center;
-        }
-        h1.visible, .main-content.visible {
-            opacity: 1;
-        }
-        p {
-            font-family: 'Times New Roman';
-            font-size: 25px;
-            line-height: 1.5;
-        }
-        .scroll-down {
-            text-align: center;
-            font-family: 'Arial';
-            color: white;
-            transition: opacity 0.15s ease-in-out;
-            opacity: 1;
-            margin-top: 25px; /* Adjust as needed */
-        }
-        .main-content {
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            padding-left: 10vw;
-            padding-right: 10vw;
-            font-size: 25px;
-        }
-    </style>
-    <script>
-        window.addEventListener('scroll', function() {
-            var h1 = document.querySelector('h1');
-            var scrollDown = document.querySelector('.scroll-down');
-            var mainContent = document.querySelector('.main-content');
-            var bg = document.querySelector('.fixed-background');
-            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        
-            var scrollFraction = scrollPosition / window.innerHeight;
-            var filterValue = 1 - (0.75 * scrollFraction);
-        
-            bg.style.filter = 'brightness(' + Math.max(filterValue, 0.25) + ')';
-        
-            if (scrollPosition > window.innerHeight / 10) {
-                if (!scrollDown.classList.contains('visible')) {
-                    scrollDown.style.opacity = '0';
-                    setTimeout(function() {
-                        scrollDown.textContent = '20190051—Kanghyeon Kim';
-                        scrollDown.style.opacity = '1';
-                    }, 500); // Match this delay with CSS transition duration
-                    scrollDown.classList.add('visible');
-                }
-                h1.classList.add('visible');
-                mainContent.classList.add('visible');
-            } else {
-                if (scrollDown.classList.contains('visible')) {
-                    scrollDown.style.opacity = '0';
-                    setTimeout(function() {
-                        scrollDown.textContent = 'Scroll down';
-                        scrollDown.style.opacity = '1';
-                    }, 500); // Match this delay with CSS transition duration
-                    scrollDown.classList.remove('visible');
-                }
-                h1.classList.remove('visible');
-                mainContent.classList.remove('visible');
-            }
-        });              
-    </script>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>LLM vs Human</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="fixed-background"></div>
@@ -111,10 +15,20 @@
         </div>
         <div class="main-content">
             <h2>Introduction</h2>
-            Now, we are facing a paradigm shift: reductionist thinking and methods of engineers are now being replaced by emergent thinking. To mimic the most complex system in the universe, human brain, engineers are now purging their reductionist thinking and methods, and are attempting to make their own complex system which will give rise to the emergent properties of human brain.
+            We are now are facing a paradigm shift: reductionist thinking and methods of engineers are now being replaced by emergent thinking. To mimic the most complex system in the universe, human brains, engineers are now purging their reductionist thinking and methods, and are attempting to make their own complex system which give rise to the emergent properties of human brain.
             <h2>The Questions</h2>
             <h3>Q1. Reductionism: Human language in the perspective of AI </h3>
             <h3>Q2. Emergence: AI-generated text in the perspective of humans</h3>
+            <ul>
+                <li>Story of Your Life: Language model in the perspective of Heptapods</li>
+                <br>
+                <iframe width="960" height="540" src="https://www.youtube.com/embed/AZ4oGBgxiuY?si=NCPb7hzDuvW-cGzE&amp;start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>
+                <li>The Bookmaking Habits of Select Species: what if language models were another species?</li>
+                <img src="data/images/bookmaking_habit.png" alt="The Bookmaking Habits of Select Species" width="960" height="540">
+                <li>Why I write: the language model’s version of “Why I write.”</li>
+                <img src="data/images/why_i_write.webp" alt="Why I write" width="960" height="540">
+            </ul>
             <h3>Q3. </h3>
             <h2>Conclusion</h2>
 
@@ -125,11 +39,11 @@
             <p>My final project aims to answer two questions: 1) “What’s the transformer model’s counterpart for humans?” and 2) “Considering language models as a human, how do they speak?”</p>
             <p><b>What’s the transformer model’s counterpart for humans?</b><br>To understand what the transformer architecture’s counterpart is for humans, I will explore a variety of concepts ranging from biology to psychology and linguistics. For the biology part, the topics will include the regions that are responsible for language production in the brain (e.g. Wernicke’s area, Broca’s area, and auditory dorsal stream), and for the linguistics part, I will mainly talk about universal grammar.</p>
             <p><b>Considering language models as a human, how do they speak?</b><br>The emergent properties that language models have will be explored by projecting them onto the stories and essays from the HSS319 course. While scientists attempt to explain phenomena from the fundamental principles, authors do the opposite of what scientists do: describing phenomena on a more abstract scale. With the help of the authors, we can project the language models onto their creations where we can observe the production of language models on new dimensions.</p>
-            <p>Examples:<br>Story of Your Life: Language model in the perspective of Heptapods<br>The Bookmaking Habits of Select Species: what if language models were another species?<br>Why I write: the language model’s version of “Why I write.”</p>
             <p>Expectations<br>I believe that, whichever questions we have regarding AI, these two questions will be the ultimate questions we will have to answer. By comparing human language and language models’ language in a more proper way, I believe we can truly understand how we speak, how AI speaks differently from us, and develop our AI literacy.</p>
         </div>
         <div style="height: 20vh">
         </div>
     </div>
+<script src="app.js"></script>
 </body>
 </html>
