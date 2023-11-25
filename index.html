@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <title>LLM vs Human</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </head>
 <body>
     <div class="fixed-background"></div>
@@ -63,8 +69,11 @@
                 </ol>
                 <div id="question-1">
                     <h2>Q1. From the perspective of AI, how do humans speak and write?</h2>
-                    <p>To understand what the transformer architecture’s counterpart is for humans, I will explore a variety of concepts ranging from biology to psychology and linguistics. For the biology part, the topics will include the regions that are responsible for language production in the brain (e.g. Wernicke’s area, Broca’s area, and auditory dorsal stream), and for the linguistics part, I will mainly talk about universal grammar.</p>
-    
+                    <p>To achieve a level of understanding of human language processing like our grasp of AI models’ mechanisms, we must first think about what we know about AI that we don’t know for human language processing. Our understanding of AI models can be divided into thee parts—1) training, 2) encoding, and 3) decoding—and we are going to explore the aspects of human language processing for each part.</p>
+                    <h3>Training: Memory</h3>
+                    <p>When an AI model is first instantiated, it does not have any information or understanding. Training is the process through which this model acquires knowledge. This process involves exposing the AI to large datasets containing examples of what it needs to learn. In the case of a language model, these datasets would consist of vast amounts of text.</p>
+                    <p>During training, the AI analyzes this data and learns to identify patterns, relationships, and rules within it. In language models, this means understanding grammar, syntax, and even the nuances of human language, such as idioms and colloquialisms. The model uses algorithms to process the data, adjust its internal parameters, and gradually improve its ability to make predictions or generate responses that are coherent and contextually relevant.</p>
+                    <p>This process is iterative and can involve millions or even billions of examples. The AI model’s performance improves over time as it continues to learn from more data. The goal of training is to create a model that can not only understand and process new, unseen data but also respond or act in a way that is accurate and useful for its intended purpose.</p>
                     <h3>Encoding: Listening and Reading</h3>
                     <figure>
                         <img src="data/images/AVS.png" alt="Auditory Ventral Stream" width="960" height="540">
