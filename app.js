@@ -4,6 +4,10 @@ const bg = document.querySelector('.fixed-background');
 const sections = document.querySelectorAll('.main-content > div, .main-content > div > div, .main-content > div > div > div');
 const navLinks = document.querySelectorAll('.side-navigation ul li a');
 
+const to_be_generated = "As of 2023, the president of South Korea is".split(' ');
+let wordIndex = 0;
+const sentenceElement = document.getElementById('text-generation'); // Replace with your actual element
+
 // Initialize variables
 let lastKnownScrollPosition = 0;
 let ticking = false;
@@ -58,6 +62,21 @@ function updateUI(scrollPosition) {
             });
         }
     });
+
+    // Next token prediction simulation
+    let queryHeight = window.innerHeight - sentenceElement.getBoundingClientRect().top;
+    let generatedText = "Who's the president of South Korea?";
+
+    const interval = window.innerHeight / 18;
+    for (let i = 0; i < to_be_generated.length; i++) {
+        if (queryHeight >= window.innerHeight / 3 + interval * i) {
+            generatedText = generatedText + " " + to_be_generated[i];
+        }
+        else {
+            break;
+        }
+    }
+    sentenceElement.textContent = generatedText;
 }
 
 // Scroll event listener with debounce using requestAnimationFrame
@@ -73,5 +92,3 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 });
-
-
