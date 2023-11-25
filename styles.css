@@ -48,7 +48,7 @@ a:link, a:visited {
 
 .active-link {
     font-weight: bold;
-    color: yellow;
+    color: rgb(136,167,136);
 }
 
 .main-content {

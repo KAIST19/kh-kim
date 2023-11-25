@@ -21,7 +21,7 @@
         </ul>
     </div>
     <div class="content">
-        <h1 style="font-size: 50pt; color: white; text-shadow: 2px 2px 4px black; margin-top: 70vh;">Humans as Robots, Robots as Humans</h1>
+        <h1 style="font-size: 50pt; color: white; text-shadow: 2px 2px 4px black; margin-top: 70vh;">Humans as AI, AI as Humans</h1>
         <div>
             <p class="scroll-down" style="font-size: 30px; font-family: 'Times New Roman'">Scroll down</p>
         </div>
@@ -45,36 +45,46 @@
                     <img src="data/images/head_anatomy.png" alt="Head Anatomy" width="400" height="250">
                     <figcaption>The functions of human organs can't be fully understood by their constituent parts—the cells.</figcaption>
                 </figure>
-                <h2>Human Brain and Reductionism</h2>
+                <h2>Human Languages and Reductionism</h2>
+                <p>Human languages have long been the subject of extensive study across numerous disciplines, most notably in fields such as linguistics and literature. These areas of study focus primarily on the outcomes of human language production, delving into the intricacies of how we communicate, the structures and rules governing our speech, and the cultural and artistic expressions manifested through language.</p>
+                <p>In these disciplines, the emphasis is placed on observing and analyzing the results of language production by humans. Researchers scrutinize everything from the nuances of spoken and written language to the broader social and cultural contexts in which language operates. This includes examining literary works, studying the evolution of language, and understanding how language influences and reflects societal norms and values.</p>
+                <p>However, despite these comprehensive studies, a significant gap remains in our understanding, primarily due to the limitations inherent in brain research. Unlike language models, where the text generation process can be examined in minute detail, the mechanisms of language production in the human brain are far more elusive. The complexity and still largely unknown workings of the human brain make it challenging to study language production with the same level of detail as the text generation of language models. As a result, while we can closely observe and analyze the outputs of human language, the intricate processes that lead to these outputs remain, to a significant extent, a mystery.</p>
                 <h2>Language Models and Emergency</h2>
                 <img src="data/images/emergence_graphs.webp" alt="Emergence Graphs" width="960" height="540">
                 <p>Advancements in artificial intelligence have led to the creation of models that harness emergent properties. Diverging from conventional models crafted through a reductionist approach tailored to specific tasks, contemporary models adopt a scalable architecture. This scalability gives rise to emergent properties, enabling the model to deal with complex tasks intelligently. In natural language processing (NLP), these state-of-the-art models, characterized by emergent properties, have largely supplanted traditional approaches. Consequently, the reductionist methodology, once prevalent, is now considered out-dated.</p>
-                <p>However, the way how engineers analyze the AI-generated text are still more of a reductionist approach. Although the text is the production of emergence, engineers attemp to analyze it in a quantitative way—measuring test accuracy mostly. In 2022, Wei et ai. published one of the first papers that explore the emerget properties of language models <a href="#emergent-abilities">[1]</a>, which is one of the milestones in the NLP filed, but this research also takes a reductionist approach to analyze emergent properties. In the following year, Schaeffer et al., proposed another way to examine the emergent properties of language models to address the inadequacy <a href="#mirage">[2]</a>, but it's still based on quantitative measurments.</p>
+                <p>However, the way how engineers analyze the AI-generated text are still more of a reductionist approach. Although the text is the production of emergence, engineers attemp to analyze it in a quantitative way—measuring test accuracy mostly. In 2022, Wei et ai. published one of the first papers that explore the emerget properties of language models <a href="#emergent-abilities">[1]</a>, which is one of the milestones in the NLP filed, but this research also takes a reductionist approach to analyze emergent properties. In the following year, Schaeffer et al., proposed another way to examine the emergent properties of language models to address the inadequacy <a href="#mirage">[2]</a>, but it's still based on quantitative measurements.</p>
             </div>
             <div id="the-questions">
                 <h1>The Questions</h1>
-                <p>Tho questions I aim to answer in this project: 1) “What’s the transformer model’s counterpart for humans?” and 2) “Considering language models as a human, how do they speak?”</p>
+                <p>As mentioned above, the methodologies of examining human languages and AI models are not compatible with each other to juxtapose the two. To address this, we are going to ask two questions and look for an answer:</p>
+                <ol>
+                    <li>From the perspective of AI, how do humans speak and write?</li>
+                    <li>From the perspective of humans, how does AI generate text?</li>
+                </ol>
                 <div id="question-1">
-                    <h2>Q1. Reductionism: Human language in the perspective of AI </h2>
+                    <h2>Q1. From the perspective of AI, how do humans speak and write?</h2>
                     <p>To understand what the transformer architecture’s counterpart is for humans, I will explore a variety of concepts ranging from biology to psychology and linguistics. For the biology part, the topics will include the regions that are responsible for language production in the brain (e.g. Wernicke’s area, Broca’s area, and auditory dorsal stream), and for the linguistics part, I will mainly talk about universal grammar.</p>
     
-                    <h3>Listening</h3>
+                    <h3>Encoding: Listening and Reading</h3>
                     <figure>
-                        <img src="data/images/AVS.png" alt="Auditory Visual Stream" width="960" height="540">
+                        <img src="data/images/AVS.png" alt="Auditory Ventral Stream" width="960" height="540">
                         <figcaption>Anatomy of auditory visual stream</figcaption>
                     </figure>
                     <h4>Sound recognition</h4>
+                    <p>Sound recognition begins with sound waves entering the ear and being transformed into neural signals by the cochlea. These signals are relayed to the primary auditory cortex in the temporal lobe, where basic features like pitch and volume are initially processed. The brain distinguishes these sounds as speech, music, or environmental noises, engaging more complex networks for further analysis.</p>
                     <h4>Sentence comprehension</h4>
+                    <p>Sentence comprehension is even more complex. It starts with the auditory processing of speech sounds. These sounds are then deciphered for meaning in areas such as Wernicke's area, which is crucial for understanding language. The brain integrates this information with knowledge of grammar and syntax, often involving Broca's area, to comprehend sentences. This process includes understanding the relationships between words, the implied context, and the intended meaning of the speaker. Both processes showcase the brain's remarkable ability to process and interpret auditory information, forming the basis of our understanding of language and communication.</p>
     
-                    <h3>Speaking</h3>
+                    <h3>Decoding: Speaking and Writing</h3>
                     <figure>
                         <img src="data/images/ADS.png" alt="Auditory Dorosal Stream" width="960" height="540">
                         <figcaption>Anatomy of auditory dorsal stream</figcaption>
                     </figure>
                     <h4>Speech production</h4>
+                    <p>Speech production in the human brain is a multi-step process that begins with the conceptualization of ideas and messages in the prefrontal cortex. This region is responsible for thinking and planning. Once an idea is formed, it is transformed into a linguistic format in areas like Broca's area, which handles the syntax and structure of speech. This linguistic plan then travels to the motor cortex, which coordinates the physical aspects of speech, involving the muscles of the mouth, tongue, and vocal cords. The harmonious coordination of these brain regions results in the fluid production of speech, showcasing the brain's intricate ability to convert thoughts into spoken words.</p>
                 </div>
                 <div id="question-2">
-                    <h2>Q2. Emergence: AI-generated text in the perspective of humans</h2>
+                    <h2>Q2. From the perspective of humans, how does AI generate text?</h2>
                     <p>The emergent properties that language models have will be explored by projecting them onto the stories and essays from the HSS319 course. While scientists attempt to explain phenomena from the fundamental principles, authors do the opposite of what scientists do: describing phenomena on a more abstract scale. With the help of the authors, we can project the language models onto their creations where we can observe the production of language models on new dimensions.</p>
     
                     <h3>Story of Your Life: Language model in the perspective of Heptapods</h3>
@@ -163,8 +173,9 @@
             </div>
             <div id="References">
                 <h1>References</h1>
-                <p>[1] <a id="emergent-abilities" href="https://arxiv.org/pdf/2206.07682.pdf" target="_blank">Emergent Abilities of Large Language Models (Wei et a., 2022)</a></p>
-                <p>[2] <a id="mirage" href="https://arxiv.org/pdf/2304.15004.pdf" target="_blank">Are Emergent Abilities of Large Language Models a Mirage? (Schaeffer., 2023)</a></p>
+                <p>[1] Emergent Abilities of Large Language Models (Wei et a., 2022)</p>
+                <p>[2] Are Emergent Abilities of Large Language Models a Mirage? (Schaeffer., 2023)</p>
+                <p>[3] Language models are unsupervised multitask learners (Radford et al., 2019)</p>
             </div>
         </div>
         <div style="height: 50vh">
