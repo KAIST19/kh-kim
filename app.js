@@ -4,9 +4,15 @@ const bg = document.querySelector('.fixed-background');
 const sections = document.querySelectorAll('.main-content > div, .main-content > div > div, .main-content > div > div > div');
 const navLinks = document.querySelectorAll('.side-navigation ul li a');
 
-const to_be_generated = "As of 2023, the president of South Korea is".split(' ');
-let wordIndex = 0;
-const sentenceElement = document.getElementById('text-generation'); // Replace with your actual element
+const to_be_generated1 = "As of 2023, the president of South Korea is Yoon Suk Yeol.".split(' ');
+const sentenceElement1 = document.getElementById('text-generation-1');
+
+const to_be_generated3 = "Your father/is about to/ask me/the question./This is/the most important/...".split('/')
+const to_be_generated4 = "Your/father/is/about/to/ask/me/the/question./This/is/the/most/important/...".split('/')
+const sentenceElement2 = document.getElementById('text-generation-2');
+const sentenceElement3 = document.getElementById('text-generation-3');
+const sentenceElement4 = document.getElementById('text-generation-4');
+const interval = window.innerHeight / 24;
 
 // Initialize variables
 let lastKnownScrollPosition = 0;
@@ -64,19 +70,74 @@ function updateUI(scrollPosition) {
     });
 
     // Next token prediction simulation
-    let queryHeight = window.innerHeight - sentenceElement.getBoundingClientRect().top;
+    let queryHeight = window.innerHeight - sentenceElement1.getBoundingClientRect().top;
     let generatedText = "Who's the president of South Korea?";
+    let lastToken = "";
 
-    const interval = window.innerHeight / 18;
-    for (let i = 0; i < to_be_generated.length; i++) {
+    for (let i = 0; i < to_be_generated1.length; i++) {
         if (queryHeight >= window.innerHeight / 3 + interval * i) {
-            generatedText = generatedText + " " + to_be_generated[i];
+            if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
+                generatedText = generatedText + " " + to_be_generated1[i];
+            } else {
+                lastToken = to_be_generated1[i];
+            }
         }
         else {
             break;
         }
     }
-    sentenceElement.textContent = generatedText;
+    
+    if (lastToken) {
+        sentenceElement1.innerHTML = generatedText + " <b><span style='color:red'>" + lastToken + "</span></b>";
+    } else {
+        sentenceElement1.textContent = generatedText;
+    }
+
+    sentenceElement2.innerHTML = "Heptapod: " + "<b><span style='color:red'>Your father is about to ask me the question. This is the most important ...</span></b>";
+
+    queryHeight = window.innerHeight - sentenceElement3.getBoundingClientRect().top;
+    generatedText = "Human:";
+
+    for (let i = 0; i < to_be_generated3.length; i++) {
+        if (queryHeight >= window.innerHeight / 3 + interval * i) {
+            if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
+                generatedText = generatedText + " " + to_be_generated3[i];
+            } else {
+                lastToken = to_be_generated3[i];
+            }
+        }
+        else {
+            break;
+        }
+    }
+    
+    if (lastToken) {
+        sentenceElement3.innerHTML = generatedText + " <b><span style='color:red'>" + lastToken + "</span></b>";
+    } else {
+        sentenceElement3.textContent = generatedText;
+    }
+
+
+    generatedText = "Language Model:";
+    for (let i = 0; i < to_be_generated4.length; i++) {
+        if (queryHeight >= window.innerHeight / 3 + interval * i) {
+            if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
+                generatedText = generatedText + " " + to_be_generated4[i];
+            } else {
+                lastToken = to_be_generated4[i];
+            }
+        }
+        else {
+            break;
+        }
+    }
+    
+    if (lastToken) {
+        sentenceElement4.innerHTML = generatedText + " <b><span style='color:red'>" + lastToken + "</span></b>";
+    } else {
+        sentenceElement4.textContent = generatedText;
+    }
+
 }
 
 // Scroll event listener with debounce using requestAnimationFrame

@@ -70,11 +70,14 @@
                 <div id="question-1">
                     <h2>Q1. From the perspective of AI, how do humans speak and write?</h2>
                     <p>To achieve a level of understanding of human language processing like our grasp of AI models’ mechanisms, we must first think about what we know about AI that we don’t know for human language processing. Our understanding of AI models can be divided into thee parts—1) training, 2) encoding, and 3) decoding—and we are going to explore the aspects of human language processing for each part.</p>
-                    <h3>Training: Memory</h3>
+
+                    <h3>Training: Learning</h3>
                     <p>When a language model is first instantiated, it does not have any information or understanding. Training is the process through which the language model acquires languages and other capabilities (e.g. reasoning and solving math problems). Surprisingly, the training of a language model consists of one task: next token prediction.</p>
                     <p>Imagine you are trying to finish a sentence “It was rainy but I don’t have an…” As long as you know how to speak English, you would finish the sentence with a word like ‘umbrella’ or ‘rain coat’. This seemingly simple task, called <b>next token prediction</b>, requires a human level of language understanding. You not only have to understand the English language, but also should be able to reason about what would be needed on a rainy day. During the training process, language models read an enormous amount of text and update the model parameters so that the model becomes good at next token prediction.</p>
                     <p>With the next-token-prediction capability a language model acquired via training, now it can generate a whole text. When asked ‘Who’s the president of South Korea?’, it starts predicting next tokens one at a time.</p>
-                    <div id="text-generation" style="text-align:center; font-size:25px; font-family: 'Courier new'; background-color:rgba(255, 255, 255, 0.1); padding:30px"></div>
+                    <div style="text-align:left; font-size:25px; font-family: 'Courier new'; background-color:rgba(255, 255, 255, 0.1); padding:30px">
+                        <div id="text-generation-1"></div>
+                    </div>
                     <p>Predicting the next token is the only thing the language model was trained to do, but it acquired the English language and also has a knowledge of who the president of South Korea is. The same goes for the way how humans acquire languages. Humans learn languages and knowledge while reading and listening, although their task is not just the next token prediction.</p>
                     <h3>Encoding: Listening and Reading</h3>
                     <figure>
@@ -103,6 +106,11 @@
                     <p>Imagine you are playing chess. In the beginning, you don’t know how this game will end because you can’t see all the possible cases ahead. But, with the several moves you can see ahead, you play chess in a quite intelligent way.</p>
                     <p>Writing is similar to playing chess. Although you don’t know how it will end, you can see some words ahead and that allows you to write in a quite intelligent way. If you were a Heptapod, you would have been able to see all the possible movements and write in the best way possible. What about ChatGPT? How many moves can it see ahead? Only one.</p>
                     <p>This is called beam search in computer science. It’s an algorithm whereby ChatGPT finds the next word, and it doesn’t let you see what set of words you will get after the next turn. It’s playing chess without seeing any moves ahead of the one it is now making.</p>
+                    <div style="text-align:left; font-size:18px; font-family: 'Courier new'; background-color:rgba(255, 255, 255, 0.1); padding:30px">
+                        <div id="text-generation-2"></div>
+                        <div id="text-generation-3"></div>
+                        <div id="text-generation-4"></div>
+                    </div>
     
                     <h3>The Bookmaking Habits of Select Species: what if language models were another species?</h3>
                     <img src="data/images/bookmaking_habit.png" alt="The Bookmaking Habits of Select Species" width="960" height="540">
