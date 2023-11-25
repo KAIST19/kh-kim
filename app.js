@@ -1,7 +1,7 @@
 const scrollDown = document.querySelector('.scroll-down');
 const mainContent = document.querySelector('.main-content');
 const bg = document.querySelector('.fixed-background');
-const sections = document.querySelectorAll('.main-content > div');
+const sections = document.querySelectorAll('.main-content > div, .main-content > div > div');
 const navLinks = document.querySelectorAll('.side-navigation ul li a');
 
 // Initialize variables
@@ -39,21 +39,23 @@ function updateUI(scrollPosition) {
     }
 
     // Determine active section and update nav links
-    let activeSection = null;
     sections.forEach(section => {
         var sectionTop = section.getBoundingClientRect().top;
         var sectionBottom = section.getBoundingClientRect().bottom;
     
-        // Check if the section is within the viewport
-        if (sectionTop <= window.innerHeight / 2 && sectionBottom >= 0) {
-            activeSection = section;
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active-link');
-        if (activeSection && link.getAttribute('href') === '#' + activeSection.id) {
-            link.classList.add('active-link');
+        // Adjusted conditions for determining if the section is within the viewport
+        if (sectionTop < window.innerHeight / 2 && sectionBottom >= window.innerHeight / 2) {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === '#' + section.id) {
+                    link.classList.add('active-link');
+                }
+            });
+        } else {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === '#' + section.id) {
+                    link.classList.remove('active-link');
+                }
+            });
         }
     });
 }
