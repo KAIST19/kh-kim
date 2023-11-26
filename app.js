@@ -40,7 +40,7 @@ function updateUI(scrollPosition) {
         if (scrollDown.classList.contains('visible')) {
             scrollDown.style.opacity = '0';
             setTimeout(() => {
-                scrollDown.textContent = 'Scroll down';
+                scrollDown.innerHTML = '<b>Scroll down</b>';
                 scrollDown.style.opacity = '1';
             }, 500); // Match this delay with CSS transition duration
             scrollDown.classList.remove('visible');
