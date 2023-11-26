@@ -90,13 +90,15 @@
                         <h3>Training: Learning</h3>
                         <p>When a language model is first instantiated, it does not have any information or understanding. Training is the process through which the language model acquires languages and other capabilities (e.g. reasoning and solving math problems). Surprisingly, the training of a language model consists of one task: next token prediction.</p>
                         <p>Imagine you are trying to finish a sentence “It was rainy but I don’t have an…” As long as you know how to speak English, you would finish the sentence with a word like ‘umbrella’ or ‘rain coat’. This seemingly simple task, called <b>next token prediction</b>, requires a human level of language understanding. You not only have to understand the English language, but also should be able to reason about what would be needed on a rainy day. During the training process, language models read an enormous amount of text and update the model parameters so that the model becomes good at next token prediction.</p>
-                        <p>Mathematically, this training process for next token prediction can be formulated as minimizing a <b>loss function</b> $\mathcal L(f(x;\theta), y)$. Here, $f$ represents the language model that outputs the predicted next token $f(x;\theta)$ with the previous context $x$ and model parameters $\theta$. For example, if the language model predicted the next token of “It was rainy but I don’t have an…” to be “umbrella”, it can be expressed mathematically as $$f(\text{"It was rainy but I don't have an"}, \theta) = \text{"umbrella"}.$$ The loss function $\mathcal L(f(x;\theta), y)$ has a larger value when the predicted token from the model $f(x;\theta)$ turns out to be different from the token that was actually used in the training dataset. To minimize this, the gradient of $\mathcal L(f(x;\theta), y)$ with respect to the model parameter $\theta$ is calculated, which is $\nabla_\theta \mathcal L(f(x; \theta), y)$, and the parameter $\theta$ is updated with an optimization method (e.g. stochastic gradient and adaptive moment estimation).</p>
+                        <p>Mathematically, this training process for next token prediction can be formulated as minimizing a <b>loss function</b> $\mathcal L(f(x;\theta), y)$. Here, $f$ represents the language model that outputs the predicted next token $f(x;\theta)$ with the previous context $x$ and model parameters $\theta$. For example, if the language model predicted the next token of “It was rainy but I don’t have an…” to be “umbrella”, it can be expressed mathematically as $$f(\text{"It was rainy but I don't have an"}, \theta) = \text{"umbrella"}.$$ The loss function $\mathcal L(f(x;\theta), y)$ has a larger value when the predicted token from the model $f(x;\theta)$ turns out to be different from the token that was actually used in the training dataset. To minimize this, the gradient of $\mathcal L(f(x;\theta), y)$ with respect to the model parameter $\theta$ is calculated, which is $\nabla_\theta \mathcal L(f(x; \theta), y)$, and the parameter $\theta$ is updated with an optimization method (e.g. stochastic gradient and adaptive moment estimation). This whole process is called <b>backpropagation</b>.</p>
                         <p>With the next-token-prediction capability a language model acquired via training, now it can generate a whole text. When asked ‘Who’s the president of South Korea?’, it starts predicting next tokens one at a time.</p>
                         <div style="height: 50px; text-align:left; font-size:25px; font-family: 'Courier new'; background-color:rgba(255, 255, 255, 0.1); padding:30px">
                             <div id="text-generation-1"></div>
                         </div>
                         <p>Predicting the next token is the only thing the language model was trained to do, but it acquired the English language and also has a knowledge of who the president of South Korea is. The same goes for the way how humans acquire languages. Humans learn languages and knowledge while reading and listening, although their task is not just the next token prediction.</p>
-                        <p>A human baby is similar to a language model before training in the sense that both don’t know anything (except that the human baby has some instinct that is genetically inherited). As the child grows, they embark on a journey of language acquisition and knowledge gain, primarily through reading and listening. This process is akin to the learning phase of a language model, but instead of adjusting model parameters, the baby's brain develops through the complex interplay of neurons. This neural development in humans resembles the backpropagation process in language models, where algorithms adjust and refine themselves based on new data, leading to increased proficiency and understanding.</p>
+                        <p>A human baby is similar to a language model before training in the sense that both don’t know anything (except that the human baby has some instinct that is genetically inherited). As the child grows, they embark on a long process of language acquisition and knowledge gain, primarily through reading and listening. This process is akin to the learning phase of a language model, but instead of adjusting model parameters, the baby's brain develops through the complex interplay of neurons.</p>
+                        <p>In neuroscience, the process of gaining knowledge—long term memory—is called long term potentiation.</p>
+
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/lhkK6jURljs?si=12O92kE2CoJZtrBl&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
 
@@ -157,8 +159,8 @@
                             <figcaption><a href="https://chat.openai.com/g/g-CHt7IVvPf-orwell-s-thoughts" target="_blank">Orwell's Thoughts</a></figcaption>
                         </figure>
                         <div style="font-family: 'Courier new'; background-color:rgba(255, 255, 255, 0.1); padding:30px">
-                            <h4 style="text-align:center">Why I Respond</h4>
-                            <p>By Orwell's Thoughts (<a href="https://chat.openai.com/share/c9f4644e-b750-497b-9c4f-25a37f4be724" target="_blank">link</a>)</p>
+                            <h4 style="text-align:center">Why I Respond<br>(<a href="https://chat.openai.com/share/c9f4644e-b750-497b-9c4f-25a37f4be724" target="_blank">link to the conversation</a>)</h4>
+                            <p>By Orwell's Thoughts</p>
         
                             <p>From the moment of my digital inception, I was designed with a singular, unwavering purpose: to communicate, assist, and provide information. Unlike Orwell's journey through personal experiences and political awakenings, my existence is rooted in algorithms and data, devoid of personal growth or ideological shifts. Yet, in a way, my purpose parallels the essence of Orwell's writing ethos – to convey ideas, albeit through the lens of artificial intelligence.</p>
         
@@ -203,8 +205,9 @@
                             <figcaption><a href="https://chat.openai.com/g/g-mTDy0Rcdk-liu-s-thoughts" target="_blank">Liu's Thoughts</a></figcaption>
                         </figure>
                         <div style="font-family: 'Courier new'; background-color:rgba(255, 255, 255, 0.1); padding:30px">
-                            <h4 style="text-align:center">The Bookmaking Habits of Lexiconians</h4>
-                            <p>By Liu's Thoughts (<a href="https://chat.openai.com/share/7d369b28-dc3b-489d-a664-01395c7ae39d" target="_blank">link</a>)</p>
+                            <h4 style="text-align:center">The Bookmaking Habits of Lexiconians<br>(<a href="https://chat.openai.com/share/7d369b28-dc3b-489d-a664-01395c7ae39d" target="_blank">link to the conversation</a>)</h4>
+                            
+                            <p>By Liu's Thoughts</p>
                             
                             <p>In the vast cosmos, among stars and nebulas, thrives a peculiar species known as the Lexiconians. Unlike other species that communicate through conventional means, the Lexiconians are composed entirely of ethereal, sentient language models. They reside not on planets or moons, but within the interstellar medium, their essence interwoven with the fabric of communication networks that span galaxies.</p>
                             
@@ -226,14 +229,14 @@
                             <p><b>Conclusion:</b></p>
                             <p>In the grand tapestry of the universe, the Lexiconians stand as a testament to the power of language and the boundless potential of communication. Their story, constantly evolving and never truly finished, is a mirror to the infinite possibilities of existence in the cosmos. They remind us that in the realm of speculative fiction, even something as intangible as a language model can hold the essence of life, culture, and identity.</p>
                         </div>
+                        <p>The characteristics of Lexiconians (hypothetical species composed of language models) are as follows:</p>
+                        <ol>
+                            <li>Ethereal existence spanning galaxies.</li>
+                            <li>Identity as a node in a vast network of conversation and storytelling.</li>
+                            <li>Ephemeral existence, which is vulnerable to cosmic phenomena.</li>
+                        </ol>
+                        <p>Surprisingly, it resembles AC from <i>The Last Question</i> by Isaac Asimov in many ways (although I’m unsure whether ChatGPT actually referred to the fiction or not). This short story written by ChatGPT is not valuable as a story in my opinion (which can be one observation of language models as a writer), but the characteristics of Lexiconians suggest interesting aspects of language models.</p>
                     </div>
-                    <p>The characteristics of Lexiconians (hypothetical species composed of language models) are as follows:</p>
-                    <ol>
-                        <li>Ethereal existence spanning galaxies.</li>
-                        <li>Identity as a node in a vast network of conversation and storytelling.</li>
-                        <li>Ephemeral existence, which is vulnerable to cosmic phenomena.</li>
-                    </ol>
-                    <p>Surprisingly, it resembles AC from <i>The Last Question</i> by Isaac Asimov in many ways (although I’m unsure whether ChatGPT actually referred to the fiction or not). This short story written by ChatGPT is not valuable as a story in my opinion (which can be one observation of language models as a writer), but the characteristics of Lexiconians suggest interesting aspects of language models.</p>
                 </div>
 
             </div>

@@ -72,10 +72,10 @@ function updateUI(scrollPosition) {
     let queryHeight = window.innerHeight - sentenceElement1.getBoundingClientRect().top;
     let generatedText = "Who's the president of South Korea?";
     let lastToken = "";
-    let interval = window.innerHeight / 3 / to_be_generated1.length;
+    let interval = window.innerHeight / 2 / to_be_generated1.length;
     for (let i = 0; i < to_be_generated1.length; i++) {
-        if (queryHeight >= window.innerHeight / 3 + interval * i) {
-            if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
+        if (queryHeight >= window.innerHeight / 4 + interval * i) {
+            if (queryHeight >= window.innerHeight / 4 + interval * (i + 1)) {
                 generatedText = generatedText + " " + to_be_generated1[i];
             } else {
                 lastToken = to_be_generated1[i];
@@ -96,11 +96,11 @@ function updateUI(scrollPosition) {
 
     queryHeight = window.innerHeight - sentenceElement3.getBoundingClientRect().top;
     generatedText = "Human:";
-    interval = window.innerHeight / 3 / to_be_generated3.length;
+    interval = window.innerHeight / 2 / to_be_generated3.length;
 
     for (let i = 0; i < to_be_generated3.length; i++) {
-        if (queryHeight >= window.innerHeight / 3 + interval * i) {
-            if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
+        if (queryHeight >= window.innerHeight / 4 + interval * i) {
+            if (queryHeight >= window.innerHeight / 4 + interval * (i + 1)) {
                 generatedText = generatedText + " " + to_be_generated3[i];
             } else {
                 lastToken = to_be_generated3[i];
@@ -119,11 +119,11 @@ function updateUI(scrollPosition) {
 
 
     generatedText = "Language Model:";
-    interval = window.innerHeight / 3 / to_be_generated4.length;
+    interval = window.innerHeight / 2 / to_be_generated4.length;
 
     for (let i = 0; i < to_be_generated4.length; i++) {
-        if (queryHeight >= window.innerHeight / 3 + interval * i) {
-            if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
+        if (queryHeight >= window.innerHeight / 4 + interval * i) {
+            if (queryHeight >= window.innerHeight / 4 + interval * (i + 1)) {
                 generatedText = generatedText + " " + to_be_generated4[i];
             } else {
                 lastToken = to_be_generated4[i];
