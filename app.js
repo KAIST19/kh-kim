@@ -22,7 +22,7 @@ let ticking = false;
 function updateUI(scrollPosition) {
     // Update background brightness
     let scrollFraction = scrollPosition / window.innerHeight;
-    let filterValue = Math.max(1 - 0.75 * scrollFraction, 0.25);
+    let filterValue = Math.max(1 - 0.85 * scrollFraction, 0.15);
     bg.style.filter = `brightness(${filterValue})`;
 
     // Toggle visibility and text of elements

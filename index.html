@@ -29,8 +29,8 @@
                 <li><a href="#question-2">Question 2</a></li>
                 <ul style="margin-left:20px">
                     <li><a href="#chiang">Chiang</a></li>
-                    <li><a href="#liu">Liu</a></li>
                     <li><a href="#orwell">Orwell</a></li>
+                    <li><a href="#liu">Liu</a></li>
                 </ul>
             </ul>
             <li><a href="#conclusion">Conclusion</a></li>
@@ -66,13 +66,16 @@
                 <p>In these disciplines, the emphasis is placed on observing and analyzing the results of language production by humans. Researchers scrutinize everything from the nuances of spoken and written language to the broader social and cultural contexts in which language operates. This includes examining literary works, studying the evolution of language, and understanding how language influences and reflects societal norms and values.</p>
                 <p>However, despite these comprehensive studies, a significant gap remains in our understanding, primarily due to the limitations inherent in brain research. Unlike language models, where the text generation process can be examined in minute detail, the mechanisms of language production in the human brain are far more elusive. The complexity and still largely unknown workings of the human brain make it challenging to study language production with the same level of detail as the text generation of language models. As a result, while we can closely observe and analyze the outputs of human language, the intricate processes that lead to these outputs remain, to a significant extent, a mystery.</p>
                 <h2>Language Models and Emergency</h2>
-                <img src="data/images/emergence_graphs.webp" alt="Emergence Graphs" width="960" height="540">
+                <figure>
+                    <img src="data/images/emergence_graphs.webp" alt="Emergence Graphs" width="760" height="440">
+                    <figcaption>Emergence of language models <a href="#emergent-abilities">[1]</a><figcaption>
+                </figure>
                 <p>Advancements in artificial intelligence have led to the creation of models that harness emergent properties. Diverging from conventional models crafted through a reductionist approach tailored to specific tasks, contemporary models adopt a scalable architecture. This scalability gives rise to emergent properties, enabling the model to deal with complex tasks intelligently. In natural language processing (NLP), these state-of-the-art models, characterized by emergent properties, have largely supplanted traditional approaches. Consequently, the reductionist methodology, once prevalent, is now considered out-dated.</p>
                 <p>However, the way how engineers analyze the AI-generated text are still more of a reductionist approach. Although the text is the production of emergence, engineers attemp to analyze it in a quantitative way—measuring test accuracy mostly. In 2022, Wei et ai. published one of the first papers that explore the emerget properties of language models <a href="#emergent-abilities">[1]</a>, which is one of the milestones in the NLP filed, but this research also takes a reductionist approach to analyze emergent properties. In the following year, Schaeffer et al., proposed another way to examine the emergent properties of language models to address the inadequacy <a href="#mirage">[2]</a>, but it's still based on quantitative measurements.</p>
             </div>
             <div id="the-questions">
                 <h1>The Questions</h1>
-                <p>As mentioned above, the methodologies of examining human languages and AI models are not compatible with each other to juxtapose the two. To address this, we are going to ask two questions and look for an answer:</p>
+                <p>The methodologies for analyzing human languages and AI-generated language differ significantly, making direct comparisons challenging. To address this issue, we will pose two questions and seek their answers:</p>
                 <ol>
                     <li>From the perspective of AI, how do humans speak and write?</li>
                     <li>From the perspective of humans, how does AI generate text?</li>
@@ -97,16 +100,8 @@
 
                     <div id="encoding">
                         <h3>Encoding: Listening and Reading</h3>
-                        <!--
-                        <figure>
-                            <img src="data/images/AVS.png" alt="Auditory Ventral Stream" width="960" height="540">
-                            <figcaption>Anatomy of auditory visual stream</figcaption>
-                        </figure>
-                        -->
-                        <h4>Sound recognition</h4>
-                        <p>Sound recognition begins with sound waves entering the ear and being transformed into neural signals by the cochlea. These signals are relayed to the primary auditory cortex in the temporal lobe, where basic features like pitch and volume are initially processed. The brain distinguishes these sounds as speech, music, or environmental noises, engaging more complex networks for further analysis.</p>
-                        <h4>Sentence comprehension</h4>
-                        <p>Sentence comprehension is even more complex. It starts with the auditory processing of speech sounds. These sounds are then deciphered for meaning in areas such as Wernicke's area, which is crucial for understanding language. The brain integrates this information with knowledge of grammar and syntax, often involving Broca's area, to comprehend sentences. This process includes understanding the relationships between words, the implied context, and the intended meaning of the speaker. Both processes showcase the brain's remarkable ability to process and interpret auditory information, forming the basis of our understanding of language and communication.</p>
+                        <p>Encoding is the process of receiving input text and transforming it into a form that language model saves information. Although this part is not as much discussed as decoding (text-generation) part due to the name “generative” AI, encoding is as much important as decoding, just like how listening is as important as speaking in a conversation.</p>
+                        <p>The knowledges of language models from both training and encoding are used to generate text. The difference is that while the knowledge from training is of general things (e.g. the English language and reasoning) that are engraved in the model parameters, the knowledge from decoding represents the context. For example, when you ask “Write an essay about climate change.” to a language model, it would first encode your query into a form to understand the context, and use its knowledge about climate change that it acquired from training to start writing an essay. In short, language models acquire long-term memories from training and short-term memories from encoding, and generate responses based on them.</p>
                     </div>
     
                     <div id="decoding">
@@ -124,7 +119,7 @@
                 <div id="question-2">
                     <h2>Q2. From the perspective of humans, how does AI generate text?</h2>
                     <p>With the existing methodology of language model analysis, it is almost impossible to see how language models write as a writer. The accuracy, latency, and all the other quantified measures do not tell about whether the language model achieved the level of writing that humans ultimately want. To analyze what emergent properties have emerged out of the language models, we need something more than numbers. Fortunately, human brains, also a product of emergence, are specialized for such tasks. Human speech is believed to be 50,000 years to 2,000,000 years old <a href="#human-speech-history">[4]</a>, and the human brain has evolved with the usage of languages. Our brains are the best tool for analyzing languages.</p>
-                    <p>For the second question—From the perspective of humans, how does AI generate text?—we are going to expand our interest from the fundamental structure of language models (as discussed in the first question) to the linguistic aspect of language models, to the psychology aspect of language models (language models as a human writer), and language models as a society (sociology). As the discussion develops, the system becomes more complicated and has more emergent properties.</p>
+                    <p>For the second question—From the perspective of humans, how does AI generate text?—we are going to expand our interest from the fundamental structure of language models (as discussed in the first question) to the linguistic aspect of language models, to the psychology aspect of language models, and language models as a society. As the discussion develops, the system becomes more complicated and has more emergent properties. This is not an easy thing to do, but we are going to get help from great minds—Ted Chiang, George Orwell, and Ken Liu—who had pondered upon this their whole life. The language models will be projected on their novel and discussed.</p>
                     <table style="margin: auto;">
                         <tr style="background-color:rgba(255, 255, 255, 0.1)">
                             <th style="padding-left:20px; padding-right:20px">Novel</th>
@@ -146,6 +141,7 @@
     
                     <div id="chiang">
                         <h3>Story of Your Life: Language model in the perspective of Heptapods</h3>
+                        <p>Watch this video. This is a scene from the movie “Arrival”, which is based on the story “Story of Your Life” by Ted Chiang.</p>
                         <iframe width="960" height="540" src="https://www.youtube.com/embed/AZ4oGBgxiuY?si=NCPb7hzDuvW-cGzE&amp;start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         <p>Imagine you are playing chess. In the beginning, you don’t know how this game will end because you can’t see all the possible cases ahead. But, with the several moves you can see ahead, you play chess in a quite intelligent way.</p>
                         <p>Writing is similar to playing chess. Although you don’t know how it will end, you can see some words ahead and that allows you to write in a quite intelligent way. If you were a Heptapod, you would have been able to see all the possible movements and write in the best way possible. What about ChatGPT? How many moves can it see ahead? Only one.</p>
