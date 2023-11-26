@@ -7,12 +7,11 @@ const navLinks = document.querySelectorAll('.side-navigation ul li a');
 const to_be_generated1 = "As of 2023, the president of South Korea is Yoon Suk Yeol.".split(' ');
 const sentenceElement1 = document.getElementById('text-generation-1');
 
-const to_be_generated3 = "Your father/is about to/ask me/the question./This is/the most important/...".split('/')
+const to_be_generated3 = "Your father/is about to/ask me the question./This is/the most important/...".split('/')
 const to_be_generated4 = "Your/father/is/about/to/ask/me/the/question./This/is/the/most/important/...".split('/')
 const sentenceElement2 = document.getElementById('text-generation-2');
 const sentenceElement3 = document.getElementById('text-generation-3');
 const sentenceElement4 = document.getElementById('text-generation-4');
-const interval = window.innerHeight / 24;
 
 // Initialize variables
 let lastKnownScrollPosition = 0;
@@ -73,7 +72,7 @@ function updateUI(scrollPosition) {
     let queryHeight = window.innerHeight - sentenceElement1.getBoundingClientRect().top;
     let generatedText = "Who's the president of South Korea?";
     let lastToken = "";
-
+    let interval = window.innerHeight / 3 / to_be_generated1.length;
     for (let i = 0; i < to_be_generated1.length; i++) {
         if (queryHeight >= window.innerHeight / 3 + interval * i) {
             if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
@@ -97,6 +96,7 @@ function updateUI(scrollPosition) {
 
     queryHeight = window.innerHeight - sentenceElement3.getBoundingClientRect().top;
     generatedText = "Human:";
+    interval = window.innerHeight / 3 / to_be_generated3.length;
 
     for (let i = 0; i < to_be_generated3.length; i++) {
         if (queryHeight >= window.innerHeight / 3 + interval * i) {
@@ -119,6 +119,8 @@ function updateUI(scrollPosition) {
 
 
     generatedText = "Language Model:";
+    interval = window.innerHeight / 3 / to_be_generated4.length;
+
     for (let i = 0; i < to_be_generated4.length; i++) {
         if (queryHeight >= window.innerHeight / 3 + interval * i) {
             if (queryHeight >= window.innerHeight / 3 + interval * (i + 1)) {
