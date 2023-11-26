@@ -30,7 +30,7 @@ function updateUI(scrollPosition) {
         if (!scrollDown.classList.contains('visible')) {
             scrollDown.style.opacity = '0';
             setTimeout(() => {
-                scrollDown.textContent = '20190051—Kanghyeon Kim';
+                scrollDown.innerHTML = 'Kanghyeon Kim';
                 scrollDown.style.opacity = '1';
             }, 500); // Match this delay with CSS transition duration
             scrollDown.classList.add('visible');
