@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Hello, {props.name}!
+        </p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -20,6 +23,14 @@ function App() {
       </header>
     </div>
   );
+}
+
+function FirstFunction() {
+  return (
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  )
 }
 
 export default App;
